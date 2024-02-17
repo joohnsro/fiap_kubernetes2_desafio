@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: kubernetes-2-desafio-service-mongo
+  labels:
+    app: kubernetes-2-desafio-service-mongo
+spec:
+  selector:
+    app: kubernetes-2-desafio-db
+  type: NodePort
+  ports:
+  - port: 27017
+    protocol: TCP
+    targetPort: 27017
+    nodePort: 32000

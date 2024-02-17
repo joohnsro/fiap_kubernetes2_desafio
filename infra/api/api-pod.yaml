@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: kubernetes-2-desafio-pod
+  labels:
+    app: kubernetes-2-desafio-pod
+spec:
+  containers:
+  - name: kubernetes-2-desafio-container
+    image: joohnsro/kubernetes-2-desafio:1.0
+    ports:
+      - containerPort: 3000
+        protocol: TCP

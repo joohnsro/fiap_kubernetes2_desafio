@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: kubernetes-2-desafio-pv-mongo
+  labels:
+    name: kubernetes-2-desafio-pv-mongo
+spec:
+  capacity:
+    storage: 1Gi
+  accessModes:
+    - ReadWriteOnce
+  storageClassName: local-storage-db
+  persistentVolumeReclaimPolicy: Retain
+  hostPath:
+    path: /c/Users/baque/Documents/Estudos/postech-software-archtecture/Fase_2/Kubernetes_Parte_II/Desafio/infra/db/data

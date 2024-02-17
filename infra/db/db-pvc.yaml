@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: kubernetes-2-desafio-pvc-mongo
+  labels:
+    name: kubernetes-2-desafio-pvc-mongo
+spec:
+  resources:
+    requests:
+      storage: 1Gi
+  accessModes:
+    - ReadWriteOnce
+  storageClassName: local-storage-db
